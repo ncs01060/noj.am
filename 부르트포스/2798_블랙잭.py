@@ -9,6 +9,7 @@ max_count = 0
 for i in range(n):
     for j in range(i+1,n):
         for k in range(j+1,n):
+            # m을 넘지 않는 선에서 최댓값
             if numbers[i]+numbers[j]+numbers[k] <= m:
                 max_count = max(max_count,numbers[i]+numbers[j]+numbers[k])
 
