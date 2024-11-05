@@ -2,6 +2,8 @@
 # w = 가로
 # m = 세로 거리두기 길이
 # n = 가로 거리두기 길이
+
+"""
 import math
 import sys; input = sys.stdin.readline
 h,w,m,n = map(int,input().split()) 
@@ -16,5 +18,14 @@ for i in range(0,w,n+1):
     county+=1
 
 print(countx * county)
+"""
 
+
+import math
+import sys ; input = sys.stdin.readline
+
+h,w,m,n = map(int,input().split())
+county = math.ceil(h / (m+1))
+countx = math.ceil(w / (n+1))
+print(countx*county)
 
