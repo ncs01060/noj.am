@@ -21,7 +21,6 @@ while True:
             if not_gather_count >= 3:
                 check[2] = False
     if check[0] == True and check[1] == True and check[2] == True:
-
         for i in range(1,len(st)):
             if st[i-1] == st[i] and st[i] != 'e' and st[i] != 'o':
                 double_check+=1
