@@ -2,7 +2,7 @@ from collections import deque
 
 n=int(input())
 for i in range(0,n):
-    
+
     queue = deque()
     temp = deque()
     n,m=map(int,input().split())
@@ -38,3 +38,5 @@ for i in range(0,n):
             
 
     print(cnt)
+
+
