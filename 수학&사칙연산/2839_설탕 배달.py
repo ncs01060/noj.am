@@ -1,4 +1,6 @@
+import math
 n=int(input())
-num1 = n / 3
-num1_g = n%3
-num2 = n / 5
+k = n/5
+print(k)
+left = n-k
+print(k)
