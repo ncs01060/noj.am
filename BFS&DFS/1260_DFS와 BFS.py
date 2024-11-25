@@ -1,4 +1,5 @@
 def dfs(V):
+    print(g)
     visited[V] = True  # 해당 V값 방문처리
     print(V, end=" ")
     for i in range(1, n + 1):
@@ -8,10 +9,11 @@ def dfs(V):
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 n,m,v = map(int,input().split())
-g = []
+g = [[0] * (n+1) for _ in range(n + 1)]
 for i in range(m):
-    a=list(map(int,input().split()))
-    g.append(a)
+    x,y=map(int,input().split())
+    g[x][y] = g[y][x] = 1
+
 
 visited = [False] * (len(g)+1)
 dfs(v)
