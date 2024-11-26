@@ -1,4 +1,3 @@
-"""
 import sympy as sym
 from sympy.abc import x
 import numpy as np
@@ -25,16 +24,3 @@ def gradient_descent(init_point, lr_rate=1e-2, epsilon=1e-5):
 # 사용 예시
 final_val, iterations = gradient_descent(init_point=np.random.uniform(-2, 2))
 print(f"최종 값: {final_val}, 반복 횟수: {iterations}")
-"""
-from scipy.integrate import quad
-
-# 적분할 함수 정의
-def f(x):
-    return x**2
-
-# 구간 [a, b]에서 정적분 계산
-a, b = 0, 1
-result, error = quad(f, a, b)
-
-print(f"적분 결과: {result}")
-print(f"오차 추정치: {error}")
