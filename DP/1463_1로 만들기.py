@@ -1,21 +1,11 @@
 n = int(input())
-dp = [0]*(10**6)
-dp[0] = n
+dp = [0] * 1000001
 
-i = 1
-cnt = 0
-while True:
-    if dp[i-1] == 1:
-         break
-    # 최적의 해를 구하는 솔루션이 필요함;;
-    elif dp[i-1] % 3 == 0:
-        dp[i] = dp[i-1] // 3
-    elif dp[i-1] % 2 == 0:
-            dp[i] = dp[i-1] // 2
-    else:
-         dp[i] = dp[i-1]-1
-    i+=1
-    cnt+=1
+for i in range(2,n+1):
+    dp[i] = dp[i-1] + 1
+    if i % 2 == 0:
+        dp[i] = min(dp[i],dp[i//2] + 1)
+    if i % 3 == 0:
+        dp[i] = min(dp[i],dp[i//3] + 1)
 
-print(cnt)
-print(dp[0:10])
+print(dp[n])
