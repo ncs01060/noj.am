@@ -7,11 +7,7 @@ for i in range(m):
     t,f = map(int,input().split())
     metrix[t][f] = metrix[f][t] = 1
 
-
-
-
-
-# 깊이 우선 탐색(그래프 이론)
+# 깊이 우선 탐색(Stack)
 def dfs(metrix,visited,v):
     stack = [v]
     while stack:
@@ -25,6 +21,8 @@ def dfs(metrix,visited,v):
         
 dfs(metrix,visited,v)
 print()
+
+# 넓이 우선 탐색 (Queue)
 def bfs(metrix,v,visited):
     queue = deque()
     queue.append(v)
